@@ -112,15 +112,12 @@ public class Main {
 
     }
     public void export(double q,int bribeMult) {
-        //printRewards(6,10,200);
-        //System.exit(0);
         FeeSnipSimulator sim = new FeeSnipSimulator();
         SimArguments args = new SimArguments();
 
         loadBasicArguments(args,q,bribeMult);
         try {
             FileWriter myWriter = new FileWriter("simresults-"+q+"-"+bribeMult+"x.csv");
-            //myWriter.write("Files in Java might be tricky, but it is fun enough!");
             myWriter.write("Strategy,Revenue\n");
 
             System.out.println("PreDelay");
